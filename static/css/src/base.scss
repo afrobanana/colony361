@@ -96,7 +96,7 @@ fieldset {
             width: 61px;
             height: 60px;
             content: " ";
-            background: url("/static/images/bg_logo_header.png") no-repeat 0 0;
+            background: url("../images/bg_logo_header.png") no-repeat 0 0;
         }
 
         a {
@@ -124,7 +124,7 @@ fieldset {
 .c361-hero {
     padding-top: $gutter * 3;
 
-    background: url("/static/images/bg_hero.jpg") no-repeat 0 0;
+    background: url("../images/bg_hero.jpg") no-repeat 0 0;
     background-size: cover;
 }
 
@@ -147,7 +147,7 @@ fieldset {
     position: relative;
 
     color: $secondary;
-    background: url("/static/images/bg_colours.jpg") repeat-x 0 0;
+    background: url("../images/bg_colours.jpg") repeat-x 0 0;
     background-size: cover;
 
     > .c361-inner {
@@ -166,7 +166,7 @@ fieldset {
 
     &:after {
         bottom: -5px;
-        background: url("/static/images/bg_hands.png") no-repeat center bottom;
+        background: url("../images/bg_hands.png") no-repeat center bottom;
     }
 }
 
@@ -237,7 +237,7 @@ fieldset {
 }
 
 .c361-drinks {
-    background: url("/static/images/bg_world_map.png") no-repeat center -110px;
+    background: url("../images/bg_world_map.png") no-repeat center -110px;
     background-size: cover;
 
     .c361-heading {
@@ -257,7 +257,7 @@ fieldset {
 
 .c361-about {
 
-    background: $tertiary url("/static/images/bg_logo_footer.jpg") no-repeat center -20px;
+    background: $tertiary url("../images/bg_logo_footer.jpg") no-repeat center -20px;
 
     dt {
         font-weight: bold;
