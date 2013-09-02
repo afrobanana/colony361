@@ -202,7 +202,6 @@ fieldset {
     margin-left: -0.35em; // maxi
     margin-top: -0.35em; // maxi
     position: relative;
-    opacity: 0.8;
     overflow: hidden;
     line-height: 1;
     box-sizing: border-box;
@@ -243,12 +242,12 @@ fieldset {
      }
 
      .c361-lineup-list-item-image {
-
+        // opacity: 0.8;
      }
 
      &:hover, &:focus {
         opacity: 1;
-        background-color: rgba(0, 0, 0, 0.6);
+        background-color: rgba(0, 0, 0, 0.8);
         z-index: 2;
 
         // @include transition (opacity 100ms ease-in 0s,
