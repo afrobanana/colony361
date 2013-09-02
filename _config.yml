@@ -1,3 +1,5 @@
 name: "Colony 361"
 description: "Colony3 61"
-domain: "afrobananarepublic.com/colony361"
+# domain: "afrobananarepublic.com"
+domain: "afrobanana.github.io"
+root: "/colony361"
