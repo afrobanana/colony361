@@ -203,6 +203,12 @@ fieldset {
     margin-top: -0.35em; // maxi
     position: relative;
     opacity: 0.8;
+    overflow: hidden;
+    line-height: 1;
+    box-sizing: border-box;
+    padding: $gutter / 2;
+    color: #cfcfcf;
+    z-index: 1;
 
     .c361-heading,
     .c361-lineup-list-item-meta,
@@ -212,10 +218,28 @@ fieldset {
         top: 0;
         left: 0;
         width: 100%;
+        opacity: 0;
+        cursor: default;
+     }
+
+     .c361-heading  {
+        top: auto;
+        bottom: 0;
+        font-family: $lucida-grande;
+        color: #fff;
+        line-height: 1;
+        padding-top: $gutter / 2;
+        margin-bottom: $gutter / 2;
      }
 
      .c361-lineup-list-item-description {
-        top: 2em;
+        font-size: 80%;
+        padding: $gutter / 2;
+        box-sizing: border-box;
+
+        p {
+            margin-bottom: $gutter / 2;
+        }
      }
 
      .c361-lineup-list-item-image {
@@ -224,10 +248,21 @@ fieldset {
 
      &:hover, &:focus {
         opacity: 1;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 2;
+
+        // @include transition (opacity 100ms ease-in 0s,
+        //                      background-color 500ms ease-in 0);
+        @include transform(scale(1.2));
+        @include transition-property (transform);
+        @include transition-duration(250ms);
+        @include transition-timing-function(ease-in);
 
         .c361-heading,
         .c361-lineup-list-item-description {
             display: block;
+            opacity: 1;
+            @include transition (opacity 1500ms ease-in 0s);
         }
 
          .c361-lineup-list-item-image {

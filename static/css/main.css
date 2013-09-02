@@ -372,11 +372,13 @@ fieldset { border-color: #c1c1c1; }
 
 .c361-lineup-list { list-style: none; margin: 0; padding: 0; }
 
-.c361-lineup-list-item { display: inline-block; width: 20%; margin-left: -0.35em; margin-top: -0.35em; position: relative; opacity: 0.8; }
-.c361-lineup-list-item .c361-heading, .c361-lineup-list-item .c361-lineup-list-item-meta, .c361-lineup-list-item .c361-lineup-list-item-description { display: none; position: absolute; top: 0; left: 0; width: 100%; }
-.c361-lineup-list-item .c361-lineup-list-item-description { top: 2em; }
-.c361-lineup-list-item:hover, .c361-lineup-list-item:focus { opacity: 1; }
-.c361-lineup-list-item:hover .c361-heading, .c361-lineup-list-item:hover .c361-lineup-list-item-description, .c361-lineup-list-item:focus .c361-heading, .c361-lineup-list-item:focus .c361-lineup-list-item-description { display: block; }
+.c361-lineup-list-item { display: inline-block; width: 20%; margin-left: -0.35em; margin-top: -0.35em; position: relative; opacity: 0.8; overflow: hidden; line-height: 1; box-sizing: border-box; padding: 17.5px; color: #cfcfcf; z-index: 1; }
+.c361-lineup-list-item .c361-heading, .c361-lineup-list-item .c361-lineup-list-item-meta, .c361-lineup-list-item .c361-lineup-list-item-description { display: none; position: absolute; top: 0; left: 0; width: 100%; opacity: 0; cursor: default; }
+.c361-lineup-list-item .c361-heading { top: auto; bottom: 0; font-family: "Lucida Grande", Tahoma, Verdana, Arial, sans-serif; color: #fff; line-height: 1; padding-top: 17.5px; margin-bottom: 17.5px; }
+.c361-lineup-list-item .c361-lineup-list-item-description { font-size: 80%; padding: 17.5px; box-sizing: border-box; }
+.c361-lineup-list-item .c361-lineup-list-item-description p { margin-bottom: 17.5px; }
+.c361-lineup-list-item:hover, .c361-lineup-list-item:focus { opacity: 1; background-color: rgba(0, 0, 0, 0.6); z-index: 2; -webkit-transform: scale(1.2); -moz-transform: scale(1.2); -ms-transform: scale(1.2); -o-transform: scale(1.2); transform: scale(1.2); -webkit-transition-property: -webkit-transform; -moz-transition-property: -moz-transform; -ms-transition-property: -ms-transform; -o-transition-property: -o-transform; transition-property: transform; -webkit-transition-duration: 250ms; -moz-transition-duration: 250ms; -ms-transition-duration: 250ms; -o-transition-duration: 250ms; transition-duration: 250ms; -webkit-transition-timing-function: ease-in; -moz-transition-timing-function: ease-in; -ms-transition-timing-function: ease-in; -o-transition-timing-function: ease-in; transition-timing-function: ease-in; }
+.c361-lineup-list-item:hover .c361-heading, .c361-lineup-list-item:hover .c361-lineup-list-item-description, .c361-lineup-list-item:focus .c361-heading, .c361-lineup-list-item:focus .c361-lineup-list-item-description { display: block; opacity: 1; -webkit-transition: opacity 1500ms ease-in 0s; -moz-transition: opacity 1500ms ease-in 0s; -ms-transition: opacity 1500ms ease-in 0s; -o-transition: opacity 1500ms ease-in 0s; transition: opacity 1500ms ease-in 0s; }
 .c361-lineup-list-item:hover .c361-lineup-list-item-image, .c361-lineup-list-item:focus .c361-lineup-list-item-image { visibility: hidden; }
 
 .c361-drinks { background: url("../images/bg_world_map.png") no-repeat center -110px; background-size: cover; }
