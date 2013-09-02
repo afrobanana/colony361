@@ -1,0 +1,399 @@
+/** app.scss @author nicolas@passged.com (Nicolas Rudas) Copyright (c) 2013 Essential Education */
+/*** Imports ****************************************************************************/
+@font-face { font-family: 'October Guard'; src: url("/static/october_guard/october_guard.eot"); src: url("/static/october_guard/october_guard.eot?#iefix") format("embedded-opentype"), url("/static/october_guard/october_guard.svg#October Guard") format("svg"), url("/static/october_guard/october_guard.woff") format("woff"), url("/static/october_guard/october_guard.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+/** variables.scss @author nicolas@passged.com (Nicolas Rudas) Copyright (c) 2013 Essential Education */
+/*** VARIABLES ****************************************************************************/
+/** normalize/base.scss @author nicolas@passged.com (Nicolas Rudas) Copyright (c) 2013 Essential Education */
+/*** VARIABLES ****************************************************************************/
+/*** HELPERS ****************************************************************************/
+.wrapper, .c361-wrapper, .container, .c361-inner { position: relative; }
+
+.container, .c361-inner { padding: 35px; max-width: 960px; margin: 0 auto; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+text_block, h1, h2, h3, h4, h5, h6, p, ol, ul, dl, table, blockquote, fieldset, pre, figure, .breadcrumb { line-height: 1.67; margin-top: 0; margin-bottom: 35px; }
+
+/*** STYLES ****************************************************************************/
+html { line-height: 1; }
+
+body { font-size: 16px; overflow-y: scroll; }
+
+hr { border: 0; }
+
+h1 { font-size: 30px; }
+
+h2 { font-size: 26px; }
+
+h3 { font-size: 20px; }
+
+h4 { font-size: 18px; }
+
+h5, h6 { font-size: 16px; }
+
+h6 { font-weight: normal; text-transform: uppercase; }
+
+nav ol, nav ul { padding: 0; margin: 0; list-style-type: none; line-height: 1; }
+
+fieldset { border: 1px solid; padding: 35px; }
+
+img { height: auto; width: auto; max-width: 100%; }
+
+/* normalize.css v2.1.0 | MIT License | git.io/normalize */
+/* ========================================================================== HTML5 display definitions ========================================================================== */
+/** Correct `block` display not defined in IE 8/9. */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
+
+/** Correct `inline-block` display not defined in IE 8/9. */
+audio, canvas, video { display: inline-block; }
+
+/** Prevent modern browsers from displaying `audio` without controls. Remove excess height in iOS 5 devices. */
+audio:not([controls]) { display: none; height: 0; }
+
+/** Address styling not present in IE 8/9. */
+[hidden] { display: none; }
+
+/* ========================================================================== Base ========================================================================== */
+/** 1. Set default font family to sans-serif. 2. Prevent iOS text size adjust after orientation change, without disabling user zoom. */
+html { font-family: sans-serif; /* 1 */ -webkit-text-size-adjust: 100%; /* 2 */ -ms-text-size-adjust: 100%; /* 2 */ }
+
+/** Remove default margin. */
+body { margin: 0; }
+
+/* ========================================================================== Links ========================================================================== */
+/** Address `outline` inconsistency between Chrome and other browsers. */
+a:focus { outline: thin dotted; }
+
+/** Improve readability when focused and also mouse hovered in all browsers. */
+a:active, a:hover { outline: 0; }
+
+/* ========================================================================== Typography ========================================================================== */
+/** Address variable `h1` font-size and margin within `section` and `article` contexts in Firefox 4+, Safari 5, and Chrome. */
+h1 { font-size: 2em; margin: 0.67em 0; }
+
+/** Address styling not present in IE 8/9, Safari 5, and Chrome. */
+abbr[title] { border-bottom: 1px dotted; }
+
+/** Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome. */
+b, strong { font-weight: bold; }
+
+/** Address styling not present in Safari 5 and Chrome. */
+dfn { font-style: italic; }
+
+/** Address differences between Firefox and other browsers. */
+hr { -moz-box-sizing: content-box; box-sizing: content-box; height: 0; }
+
+/** Address styling not present in IE 8/9. */
+mark { background: #ff0; color: #000; }
+
+/** Correct font family set oddly in Safari 5 and Chrome. */
+code, kbd, pre, samp { font-family: monospace, serif; font-size: 1em; }
+
+/** Improve readability of pre-formatted text in all browsers. */
+pre { white-space: pre-wrap; }
+
+/** Set consistent quote types. */
+q { quotes: "\201C" "\201D" "\2018" "\2019"; }
+
+/** Address inconsistent and variable font size in all browsers. */
+small { font-size: 80%; }
+
+/** Prevent `sub` and `sup` affecting `line-height` in all browsers. */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+
+sup { top: -0.5em; }
+
+sub { bottom: -0.25em; }
+
+/* ========================================================================== Embedded content ========================================================================== */
+/** Remove border when inside `a` element in IE 8/9. */
+img { border: 0; }
+
+/** Correct overflow displayed oddly in IE 9. */
+svg:not(:root) { overflow: hidden; }
+
+/* ========================================================================== Figures ========================================================================== */
+/** Address margin not present in IE 8/9 and Safari 5. */
+figure { margin: 0; }
+
+/* ========================================================================== Forms ========================================================================== */
+/** Define consistent border, margin, and padding. */
+fieldset { border: none; margin: 0; padding: 0; }
+
+/** 1. Correct `color` not being inherited in IE 8/9. 2. Remove padding so people aren't caught out if they zero out fieldsets. */
+legend { border: 0; /* 1 */ padding: 0; /* 2 */ }
+
+/** 1. Correct font family not being inherited in all browsers. 2. Correct font size not being inherited in all browsers. 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome. */
+button, input, select, textarea { font-family: inherit; /* 1 */ font-size: 100%; /* 2 */ margin: 0; /* 3 */ }
+
+/** Address Firefox 4+ setting `line-height` on `input` using `!important` in the UA stylesheet. */
+button, input { line-height: normal; }
+
+/** Address inconsistent `text-transform` inheritance for `button` and `select`. All other form control elements do not inherit `text-transform` values. Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+. Correct `select` style inheritance in Firefox 4+ and Opera. */
+button, select { text-transform: none; }
+
+/** 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio` and `video` controls. 2. Correct inability to style clickable `input` types in iOS. 3. Improve usability and consistency of cursor style between image-type `input` and others. */
+button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; /* 2 */ cursor: pointer; /* 3 */ }
+
+/** Re-set default cursor for disabled elements. */
+button[disabled], html input[disabled] { cursor: default; }
+
+/** 1. Address box sizing set to `content-box` in IE 8/9. 2. Remove excess padding in IE 8/9. */
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; /* 1 */ padding: 0; /* 2 */ }
+
+/** 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome. 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome (include `-moz` to future-proof). */
+input[type="search"] { -webkit-appearance: textfield; /* 1 */ -moz-box-sizing: content-box; -webkit-box-sizing: content-box; /* 2 */ box-sizing: content-box; }
+
+/** Remove inner padding and search cancel button in Safari 5 and Chrome on OS X. */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+
+/** Remove inner padding and border in Firefox 4+. */
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+/** 1. Remove default vertical scrollbar in IE 8/9. 2. Improve readability and alignment in all browsers. */
+textarea { overflow: auto; /* 1 */ vertical-align: top; /* 2 */ }
+
+/* ========================================================================== Tables ========================================================================== */
+/** Remove most spacing between table cells. */
+table { border-collapse: collapse; border-spacing: 0; }
+
+/** normalize/forms.scss @author nicolas@passged.com (Nicolas Rudas) Copyright (c) 2013 Essential Education */
+/*** VARIABLES ****************************************************************************/
+/*** STYLES ****************************************************************************/
+input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="time"], input[type="week"], textarea { color: inherit; padding: 17.5px; border: 1px solid #c1c1c1; background-color: #fefefe; -webkit-transition: box-shadow 300ms; -moz-transition: box-shadow 300ms; -ms-transition: box-shadow 300ms; -o-transition: box-shadow 300ms; transition: box-shadow 300ms; -webkit-box-shadow: inset 1px 1px 5px 1px #dbdbdb; box-shadow: inset 1px 1px 5px 1px #dbdbdb; }
+input[type="email"]:focus, input[type="email"].is-focused, input[type="number"]:focus, input[type="number"].is-focused, input[type="password"]:focus, input[type="password"].is-focused, input[type="search"]:focus, input[type="search"].is-focused, input[type="tel"]:focus, input[type="tel"].is-focused, input[type="text"]:focus, input[type="text"].is-focused, input[type="url"]:focus, input[type="url"].is-focused, input[type="color"]:focus, input[type="color"].is-focused, input[type="date"]:focus, input[type="date"].is-focused, input[type="datetime"]:focus, input[type="datetime"].is-focused, input[type="datetime-local"]:focus, input[type="datetime-local"].is-focused, input[type="month"]:focus, input[type="month"].is-focused, input[type="time"]:focus, input[type="time"].is-focused, input[type="week"]:focus, input[type="week"].is-focused, textarea:focus, textarea.is-focused { outline: none; border-color: #dbdbdb; -webkit-box-shadow: inset 0 0 0 0 white, 0 0 4px #c1c1c1; box-shadow: inset 0 0 0 0 white, 0 0 4px #c1c1c1; }
+input[type="email"]:disabled, input[type="number"]:disabled, input[type="password"]:disabled, input[type="search"]:disabled, input[type="tel"]:disabled, input[type="text"]:disabled, input[type="url"]:disabled, input[type="color"]:disabled, input[type="date"]:disabled, input[type="datetime"]:disabled, input[type="datetime-local"]:disabled, input[type="month"]:disabled, input[type="time"]:disabled, input[type="week"]:disabled, textarea:disabled { opacity: 0.5; border-color: #dbdbdb; }
+input[type="email"]::-webkit-input-placeholder, input[type="number"]::-webkit-input-placeholder, input[type="password"]::-webkit-input-placeholder, input[type="search"]::-webkit-input-placeholder, input[type="tel"]::-webkit-input-placeholder, input[type="text"]::-webkit-input-placeholder, input[type="url"]::-webkit-input-placeholder, input[type="color"]::-webkit-input-placeholder, input[type="date"]::-webkit-input-placeholder, input[type="datetime"]::-webkit-input-placeholder, input[type="datetime-local"]::-webkit-input-placeholder, input[type="month"]::-webkit-input-placeholder, input[type="time"]::-webkit-input-placeholder, input[type="week"]::-webkit-input-placeholder, textarea::-webkit-input-placeholder { /* WebKit browsers */ color: #f8eedf; }
+input[type="email"]:-moz-placeholder, input[type="number"]:-moz-placeholder, input[type="password"]:-moz-placeholder, input[type="search"]:-moz-placeholder, input[type="tel"]:-moz-placeholder, input[type="text"]:-moz-placeholder, input[type="url"]:-moz-placeholder, input[type="color"]:-moz-placeholder, input[type="date"]:-moz-placeholder, input[type="datetime"]:-moz-placeholder, input[type="datetime-local"]:-moz-placeholder, input[type="month"]:-moz-placeholder, input[type="time"]:-moz-placeholder, input[type="week"]:-moz-placeholder, textarea:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ color: #f8eedf; }
+input[type="email"]::-moz-placeholder, input[type="number"]::-moz-placeholder, input[type="password"]::-moz-placeholder, input[type="search"]::-moz-placeholder, input[type="tel"]::-moz-placeholder, input[type="text"]::-moz-placeholder, input[type="url"]::-moz-placeholder, input[type="color"]::-moz-placeholder, input[type="date"]::-moz-placeholder, input[type="datetime"]::-moz-placeholder, input[type="datetime-local"]::-moz-placeholder, input[type="month"]::-moz-placeholder, input[type="time"]::-moz-placeholder, input[type="week"]::-moz-placeholder, textarea::-moz-placeholder { /* Mozilla Firefox 19+ */ color: #f8eedf; }
+input[type="email"]:-ms-input-placeholder, input[type="number"]:-ms-input-placeholder, input[type="password"]:-ms-input-placeholder, input[type="search"]:-ms-input-placeholder, input[type="tel"]:-ms-input-placeholder, input[type="text"]:-ms-input-placeholder, input[type="url"]:-ms-input-placeholder, input[type="color"]:-ms-input-placeholder, input[type="date"]:-ms-input-placeholder, input[type="datetime"]:-ms-input-placeholder, input[type="datetime-local"]:-ms-input-placeholder, input[type="month"]:-ms-input-placeholder, input[type="time"]:-ms-input-placeholder, input[type="week"]:-ms-input-placeholder, textarea:-ms-input-placeholder { /* Internet Explorer 10+ */ color: #f8eedf; }
+
+textarea { line-height: 1.67; }
+
+/** normalize/helpers.scss @author nicolas@passged.com (Nicolas Rudas) Copyright (c) 2013 Essential Education */
+.center { clear: both; float: none; text-align: center; display: block; }
+
+small.left, a.left, span.left, img.left { float: left; margin: 0 35px 35px 0; }
+
+small.right, a.right, span.right, img.right { float: right; margin: 0 0 35px 35px; }
+
+img.center { margin: 0 auto; float: none; }
+
+.meta a { color: inherit; }
+
+.align-right { text-align: right; }
+
+.align-left { text-align: left; }
+
+.pull-right { float: right; }
+
+.pull-left { float: left; }
+
+.small { font-size: 90%; }
+
+.smaller { font-size: 80%; }
+
+.smallest { font-size: 75%; }
+
+.large { font-size: 110%; }
+
+.larger { font-size: 120%; }
+
+.largest { font-size: 130%; }
+
+/* For image replacement */
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; line-height: 0; }
+
+.ir br { display: none; }
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden { display: none !important; visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden, .c361-helper { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active, .focusable.c361-helper:active, .visuallyhidden.focusable:focus, .focusable.c361-helper:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+
+/* Contain floats: h5bp.com/q */
+.container:before, .c361-inner:before, .container:after, .c361-inner:after, .clearfix:before, .nav-horizontal:before, .c361-sponsors ul:before, .clearfix:after, .nav-horizontal:after, .c361-sponsors ul:after { content: ""; display: table; }
+
+.container:after, .c361-inner:after, .clearfix:after, .nav-horizontal:after, .c361-sponsors ul:after { clear: both; }
+
+.lt-ie8 .container, .lt-ie8 .c361-inner, .lt-ie8 .clearfix, .lt-ie8 .nav-horizontal, .lt-ie8 .c361-sponsors ul, .c361-sponsors .lt-ie8 ul { zoom: 1; }
+
+.clear { float: none; clear: both; display: block; }
+
+/** elements/fonts.scss @author nicolas@passged.com (Nicolas Rudas) Copyright (c) 2013 Essential Education */
+/*** VARIABLES ****************************************************************************/
+@font-face { font-family: 'BLOKKRegular'; src: url("../fonts/blokk/blokk.eot"); src: url("../fonts/blokk/blokk.eot?#iefix") format("embedded-opentype"), url("../fonts/blokk/blokk.woff") format("woff"), url("../fonts/blokk/blokk.svg#BLOKK") format("svg"); font-weight: normal; font-style: normal; }
+
+/** elements/forms.scss @author nicolas@passged.com (Nicolas Rudas) Copyright (c) 2013 Essential Education */
+/*** VARIABLES ****************************************************************************/
+/*** STYLES ****************************************************************************/
+.form-select, .form-textarea, .form-checkboxgroup, .form-radiogroup, .form-input { margin-bottom: 23.33333px; }
+.form-select:last-child, .form-textarea:last-child, .form-checkboxgroup:last-child, .form-radiogroup:last-child, .form-input:last-child { margin-bottom: 0; }
+
+.form-checkboxgroup .form-input, .form-checkboxgroup .form-radio, .form-radiogroup .form-input, .form-radiogroup .form-radio { margin-bottom: 11.66667px; }
+.form-checkboxgroup .form-input:last-child, .form-checkboxgroup .form-radio:last-child, .form-radiogroup .form-input:last-child, .form-radiogroup .form-radio:last-child { margin-bottom: 0; }
+
+.form-input-item-has-figure { margin: 0 35px 35px 0 !important; min-width: 23.2%; display: inline-block; }
+.form-input-item-has-figure input:disabled + label img { opacity: 0.6; }
+.form-input-item-has-figure input:checked + label img { opacity: 1; }
+.form-input-item-has-figure label img { vertical-align: top; }
+
+input[size="1"] { width: 1em; }
+
+/** elements/buttons.scss @author nicolas@passged.com (Nicolas Rudas) Copyright (c) 2013 Essential Education */
+/*** VARIABLES ****************************************************************************/
+/*** MIXINS ****************************************************************************/
+/*** HELPERS ****************************************************************************/
+/*** STYLES ****************************************************************************/
+._btn, .btn, .btn-primary { font-size: inherit !important; font-weight: inherit !important; }
+
+.btn { border: 1px solid #dadada; border-radius: 3px; -webkit-box-shadow: inset 0 1px 0 0 white; box-shadow: inset 0 1px 0 0 white; color: #333333; display: inline-block; font-size: 11px; font-weight: bold; background-color: #fefefe; background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fefefe), color-stop(100%, #e2e2e2)); background-image: -webkit-linear-gradient(top, #fefefe, #e2e2e2); background-image: -moz-linear-gradient(top, #fefefe, #e2e2e2); background-image: -ms-linear-gradient(top, #fefefe, #e2e2e2); background-image: -o-linear-gradient(top, #fefefe, #e2e2e2); background-image: linear-gradient(top, #fefefe, #e2e2e2); padding: 7px 18px; text-decoration: none; text-shadow: 0 1px 0 white; -webkit-background-clip: padding-box; }
+.btn:hover:not(:disabled), .btn:hover:not(.is-disabled) { -webkit-box-shadow: inset 0 1px 0 0 white; box-shadow: inset 0 1px 0 0 white; cursor: pointer; background-color: #f1f1f1; background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f1f1f1), color-stop(100%, #dadada)); background-image: -webkit-linear-gradient(top, #f1f1f1, #dadada); background-image: -moz-linear-gradient(top, #f1f1f1, #dadada); background-image: -ms-linear-gradient(top, #f1f1f1, #dadada); background-image: -o-linear-gradient(top, #f1f1f1, #dadada); background-image: linear-gradient(top, #f1f1f1, #dadada); }
+.btn:active:not(:disabled), .btn:active:not(.is-disabled) { border: 1px solid #dadada; -webkit-box-shadow: inset 0 0 8px 4px lightgrey, inset 0 0 8px 4px lightgrey, 0 1px 1px 0 #eeeeee; box-shadow: inset 0 0 8px 4px lightgrey, inset 0 0 8px 4px lightgrey, 0 1px 1px 0 #eeeeee; }
+.btn:disabled, .btn.is-disabled { opacity: 0.5; cursor: not-allowed !important; }
+
+.btn-primary { border: 1px solid #1e54b6; border-radius: 3px; -webkit-box-shadow: inset 0 1px 0 0 #8aa8dd; box-shadow: inset 0 1px 0 0 #8aa8dd; color: white; display: inline-block; font-size: 11px; font-weight: bold; background-color: #4679d5; background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4679d5), color-stop(100%, #205ac3)); background-image: -webkit-linear-gradient(top, #4679d5, #205ac3); background-image: -moz-linear-gradient(top, #4679d5, #205ac3); background-image: -ms-linear-gradient(top, #4679d5, #205ac3); background-image: -o-linear-gradient(top, #4679d5, #205ac3); background-image: linear-gradient(top, #4679d5, #205ac3); padding: 7px 18px; text-decoration: none; text-shadow: 0 1px 0 #154aaa; -webkit-background-clip: padding-box; }
+.btn-primary:hover:not(:disabled), .btn-primary:hover:not(.is-disabled) { -webkit-box-shadow: inset 0 1px 0 0 #628ad3; box-shadow: inset 0 1px 0 0 #628ad3; cursor: pointer; background-color: #366bcb; background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #366bcb), color-stop(100%, #1f54b5)); background-image: -webkit-linear-gradient(top, #366bcb, #1f54b5); background-image: -moz-linear-gradient(top, #366bcb, #1f54b5); background-image: -ms-linear-gradient(top, #366bcb, #1f54b5); background-image: -o-linear-gradient(top, #366bcb, #1f54b5); background-image: linear-gradient(top, #366bcb, #1f54b5); }
+.btn-primary:active:not(:disabled), .btn-primary:active:not(.is-disabled) { border: 1px solid #1e54b6; -webkit-box-shadow: inset 0 0 8px 4px #1d4ea7, inset 0 0 8px 4px #1d4ea7, 0 1px 1px 0 #eeeeee; box-shadow: inset 0 0 8px 4px #1d4ea7, inset 0 0 8px 4px #1d4ea7, 0 1px 1px 0 #eeeeee; }
+.btn-primary:disabled, .btn-primary.is-disabled { opacity: 0.5; cursor: not-allowed !important; }
+
+/** elements/nav.scss @author nicolas@passged.com (Nicolas Rudas) Copyright (c) 2013 Essential Education */
+/*** VARIABLES ****************************************************************************/
+/* =menus
+======================================================================== */
+.nav-horizontal > .nav-item { float: left; position: relative; margin-bottom: 0; }
+
+.nav-vertical .nav-item .nav-item a { padding-left: 50px; }
+.nav-vertical .nav-item .nav-item .nav-item a { padding-left: 80px; }
+
+.nav-item.is-active { font-weight: normal; }
+.nav-item.is-active a { color: #fff; text-decoration: none; }
+.nav-item.is-active .nav-horizontal, .nav-item.is-active .nav-vertical { display: block !important; }
+.nav-item > a { display: block; padding: 12px 20px; }
+
+/* =nav-group
+======================================================================== */
+.nav-group { @extends .clearfix; }
+.nav-group .nav-horizontal { display: inline-block; vertical-align: middle; }
+.nav-group .nav-vertical { margin-bottom: 35px; }
+.nav-group .nav-vertical:last-child { margin-bottom: 0; }
+
+.nav-group-name { font-size: 80%; font-weight: bold; text-transform: uppercase; margin-bottom: 17.5px; padding-left: 20px; }
+
+/* =pagination
+======================================================================== */
+.pagination { line-height: 1; display: inline-block; vertical-align: middle; border-radius: 6px; }
+
+.pagination-item { display: inline; }
+.pagination-item a { float: left; padding: 10px 20px; text-decoration: none; border: 1px solid; border-left-width: 0; cursor: pointer; }
+.pagination-item:first-child a { border-left-width: 1px; border-radius: 6px 0 0 6px; }
+.pagination-item:last-child a { border-radius: 0 6px 6px 0; }
+.pagination-item.is-active { font-weight: bold; }
+.pagination-item.is-last a { border-right: 1px solid; display: inline-block; }
+.pagination-item.is-disabled a, .pagination-item.is-disabled a:hover { background-color: transparent; cursor: default; }
+
+.pagination-steps { border-radius: 0; }
+.pagination-steps .pagination-item a { margin-right: 35px; border-width: 2px; border-radius: 35px; position: relative; }
+.pagination-steps .pagination-item a:after { position: absolute; width: 55%; left: 100%; content: ' '; top: 0.7em; }
+.pagination-steps .pagination-item:last-child a:after { display: none; }
+.pagination-steps .pagination-step-up a { background-color: inherit; }
+
+.pagination-more { cursor: pointer; }
+.pagination-more.is-active { opacity: 0.6; text-decoration: none; }
+
+.lt-ie8 .pagination ul { display: inline; zoom: 1; }
+
+/* =breadcrumb
+========================================================================== */
+.breadcrumb { font-size: 14px; }
+.breadcrumb ol, .breadcrumb ul { display: inline; }
+
+.breadcrumb-item { display: inline-block; margin-bottom: 0; }
+.breadcrumb-item .breadcrumb-item { display: none; }
+.breadcrumb-item .breadcrumb-item.is-active { display: inherit; }
+.breadcrumb-item > ol:before, .breadcrumb-item:before { content: '\203A'; margin: 0 10px; }
+.breadcrumb-item:first-child:before { content: ''; margin: 0; }
+.breadcrumb-item:last-child a:link, .breadcrumb-item:last-child a:visited { text-decoration: none; }
+.breadcrumb-item a:link, .breadcrumb-item a:visited { text-decoration: underline; }
+
+/* =tabs
+========================================================================== */
+.tab-content { display: none; }
+
+.tab-content.tab-active { display: block; }
+
+/* Responsive Layout */
+@media (max-width: 767px) { /* Smartphones and Tablets only */
+  .nav-group > .pull-right, .nav-group > .pull-left { float: none; } }
+/** normalize/base.scss
+ @fileoverview Define colour palette and how it should be used. @author nicolas@passged.com (Nicolas Rudas) Copyright (c) 2013 Essential Education */
+/*** VARIABLES ****************************************************************************/
+/*** STYLES ****************************************************************************/
+body { font-family: "Lucida Grande", Tahoma, Verdana, Arial, sans-serif; color: #d29239; background-color: #744139; text-align: center; }
+
+hr { border-top: 3px solid #cccccc; }
+
+nav a { color: #744139; }
+
+a:link { color: #eba03f; }
+
+fieldset { border-color: #c1c1c1; }
+
+.c361-heading, .c361-nav-global { font-family: 'October Guard'; font-weight: normal; }
+
+.c361-header-global { position: absolute; top: 0; right: 0; left: 0; }
+.c361-header-global h1, .c361-header-global h2 { line-height: 1; margin: 0; }
+.c361-header-global h1 { color: #d26255; font-size: 5em; text-align: left; position: relative; }
+.c361-header-global h1:before { position: absolute; left: -80px; top: 10px; width: 61px; height: 60px; content: " "; background: url("/static/images/bg_logo_header.png") no-repeat 0 0; }
+.c361-header-global h1 a { color: inherit; text-decoration: none; }
+.c361-header-global h2 { color: #744139; font-size: 3em; position: absolute; top: 45px; right: 35px; text-align: right; }
+.c361-header-global h2 small { font-family: "Lucida Grande", Tahoma, Verdana, Arial, sans-serif; font-size: 35%; font-weight: normal; display: block; }
+
+.c361-hero { padding-top: 105px; background: url("/static/images/bg_hero.jpg") no-repeat 0 0; background-size: cover; }
+
+.c361-nav-global { font-size: 2em; }
+.c361-nav-global .nav-item { width: 25%; }
+.c361-nav-global .nav-item a { color: #d26255; }
+
+.c361-lineup { padding-left: 0; padding-right: 0; padding-bottom: 500px; position: relative; color: #744139; background: url("/static/images/bg_colours.jpg") repeat-x 0 0; background-size: cover; }
+.c361-lineup > .c361-inner { z-index: 1; }
+.c361-lineup:after { position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-size: contain; content: " "; }
+.c361-lineup:after { bottom: -5px; background: url("/static/images/bg_hands.png") no-repeat center bottom; }
+
+.c361-lineup-stage { position: relative; margin: 35px 0; }
+.c361-lineup-stage h3.c361-heading { line-height: 1; font-size: 3.5em; }
+.c361-lineup-stage .c361-lineup-stage-meta { display: inline; position: absolute; top: 1.4em; right: 0; }
+
+.c361-lineup-list { list-style: none; margin: 0; padding: 0; }
+
+.c361-lineup-list-item { display: inline-block; width: 25%; max-width: 220px; margin-left: -0.35em; margin-top: -0.35em; position: relative; opacity: 0.8; }
+.c361-lineup-list-item .c361-heading, .c361-lineup-list-item .c361-lineup-list-item-meta, .c361-lineup-list-item .c361-lineup-list-item-description { display: none; position: absolute; top: 0; left: 0; width: 100%; }
+.c361-lineup-list-item .c361-lineup-list-item-description { top: 2em; }
+.c361-lineup-list-item:hover, .c361-lineup-list-item:focus { opacity: 1; }
+.c361-lineup-list-item:hover .c361-heading, .c361-lineup-list-item:hover .c361-lineup-list-item-description, .c361-lineup-list-item:focus .c361-heading, .c361-lineup-list-item:focus .c361-lineup-list-item-description { display: block; }
+.c361-lineup-list-item:hover .c361-lineup-list-item-image, .c361-lineup-list-item:focus .c361-lineup-list-item-image { visibility: hidden; }
+
+.c361-drinks { background: url("/static/images/bg_world_map.png") no-repeat center -110px; background-size: cover; }
+.c361-drinks .c361-heading { font-size: 3.5em; color: #c3b26b; }
+
+.c361-location { color: #ccc; background-color: #000; }
+.c361-location a { color: #fff; }
+
+.c361-about { background: #5d342e url("/static/images/bg_logo_footer.jpg") no-repeat center -20px; }
+.c361-about dt { font-weight: bold; color: #eba03f; }
+.c361-about dd { margin-left: 0; }
+.c361-about .c361-heading { font-size: 3.5em; color: #c3b26b; }
+.c361-about .c361-about-col1, .c361-about .c361-about-col2, .c361-about .c361-about-col3 { width: 32%; display: inline-block; }
+
+.c361-sponsors { background-color: #000; line-height: 1; }
+.c361-sponsors ul { list-style: none; margin: 0; padding: 0; display: inline-block; line-height: 1; }
+.c361-sponsors li { display: inline-block; min-height: 150px; min-width: 230px; background-color: #222; }
+
+.c361-footer-global { font-size: 75%; color: #d26255; }
+.c361-footer-global a { color: inherit; }
