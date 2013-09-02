@@ -386,10 +386,10 @@ fieldset { border-color: #c1c1c1; }
 .c361-location a { color: #fff; }
 
 .c361-about { background: #5d342e url("/static/images/bg_logo_footer.jpg") no-repeat center -20px; }
-.c361-about dt { font-weight: bold; color: #eba03f; }
+.c361-about dt { font-weight: bold; color: #fff; }
 .c361-about dd { margin-left: 0; }
 .c361-about .c361-heading { font-size: 3.5em; color: #c3b26b; }
-.c361-about .c361-about-col1, .c361-about .c361-about-col2, .c361-about .c361-about-col3 { width: 32%; display: inline-block; }
+.c361-about .c361-about-col1, .c361-about .c361-about-col2, .c361-about .c361-about-col3 { font-size: 80%; width: 32%; display: inline-block; vertical-align: top; }
 
 .c361-sponsors { background-color: #000; line-height: 1; }
 .c361-sponsors ul { list-style: none; margin: 0; padding: 0; display: inline-block; line-height: 1; }

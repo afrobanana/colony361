@@ -261,7 +261,7 @@ fieldset {
 
     dt {
         font-weight: bold;
-        color: $helper3;
+        color: #fff;
     }
     dd {
         margin-left: 0;
@@ -275,8 +275,10 @@ fieldset {
     .c361-about-col1, // maxi
     .c361-about-col2,
     .c361-about-col3 {
+        font-size: 80%;
         width: 32%;
         display: inline-block;
+        vertical-align: top;
     }
 }
 
