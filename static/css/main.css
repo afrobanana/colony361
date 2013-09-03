@@ -335,9 +335,9 @@ input[size="1"] { width: 1em; }
  @fileoverview Define colour palette and how it should be used. @author rudas@afrobananarepublic.com (Nicolas Rudas) Copyright (c) 2013 The Afro Banana Republic */
 /*** VARIABLES ****************************************************************************/
 /*** STYLES ****************************************************************************/
-.animated, .c361-lineup-list-item.is-active .c361-lineup-list-item-description, .c361-lineup-list-item.is-active .c361-lineup-list-item-image { -webkit-animation-fill-mode: both; -moz-animation-fill-mode: both; -ms-animation-fill-mode: both; -o-animation-fill-mode: both; animation-fill-mode: both; -webkit-animation-duration: 0.8s; -moz-animation-duration: 0.8s; -ms-animation-duration: 0.8s; -o-animation-duration: 0.8s; animation-duration: 0.8s; }
+.animated, .c361-lineup-list-item .c361-lineup-list-item-description { -webkit-animation-fill-mode: both; -moz-animation-fill-mode: both; -ms-animation-fill-mode: both; -o-animation-fill-mode: both; animation-fill-mode: both; -webkit-animation-duration: 0.8s; -moz-animation-duration: 0.8s; -ms-animation-duration: 0.8s; -o-animation-duration: 0.8s; animation-duration: 0.8s; }
 
-.animated.hinge, .c361-lineup-list-item.is-active .hinge.c361-lineup-list-item-description, .c361-lineup-list-item.is-active .hinge.c361-lineup-list-item-image { -webkit-animation-duration: 0.8s; -moz-animation-duration: 0.8s; -ms-animation-duration: 0.8s; -o-animation-duration: 0.8s; animation-duration: 0.8s; }
+.animated.hinge, .c361-lineup-list-item .hinge.c361-lineup-list-item-description { -webkit-animation-duration: 0.8s; -moz-animation-duration: 0.8s; -ms-animation-duration: 0.8s; -o-animation-duration: 0.8s; animation-duration: 0.8s; }
 
 @-webkit-keyframes flipInY { 0% { -webkit-transform: perspective(400px) rotateY(90deg); opacity: 0; }
   40% { -webkit-transform: perspective(400px) rotateY(-10deg); }
@@ -359,7 +359,21 @@ input[size="1"] { width: 1em; }
   70% { transform: perspective(400px) rotateY(10deg); }
   100% { transform: perspective(400px) rotateY(0deg); opacity: 1; } }
 
-.flipInY, .c361-lineup-list-item.is-active .c361-lineup-list-item-description, .c361-lineup-list-item.is-active .c361-lineup-list-item-image { -webkit-backface-visibility: visible !important; -webkit-animation-name: flipInY; -moz-backface-visibility: visible !important; -moz-animation-name: flipInY; -o-backface-visibility: visible !important; -o-animation-name: flipInY; backface-visibility: visible !important; animation-name: flipInY; }
+.flipInY, .c361-lineup-list-item.is-active .c361-lineup-list-item-description { -webkit-backface-visibility: visible !important; -webkit-animation-name: flipInY !important; -moz-backface-visibility: visible !important; -moz-animation-name: flipInY !important; -o-backface-visibility: visible !important; -o-animation-name: flipInY !important; backface-visibility: visible !important; animation-name: flipInY !important; }
+
+@-webkit-keyframes flipOutY { 0% { -webkit-transform: perspective(400px) rotateY(0deg); opacity: 1; }
+  100% { -webkit-transform: perspective(400px) rotateY(90deg); opacity: 0; } }
+
+@-moz-keyframes flipOutY { 0% { -moz-transform: perspective(400px) rotateY(0deg); opacity: 1; }
+  100% { -moz-transform: perspective(400px) rotateY(90deg); opacity: 0; } }
+
+@-o-keyframes flipOutY { 0% { -o-transform: perspective(400px) rotateY(0deg); opacity: 1; }
+  100% { -o-transform: perspective(400px) rotateY(90deg); opacity: 0; } }
+
+@keyframes flipOutY { 0% { transform: perspective(400px) rotateY(0deg); opacity: 1; }
+  100% { transform: perspective(400px) rotateY(90deg); opacity: 0; } }
+
+.flipOutY { -webkit-backface-visibility: visible !important; -webkit-animation-name: flipOutY !important; -moz-backface-visibility: visible !important; -moz-animation-name: flipOutY !important; -o-backface-visibility: visible !important; -o-animation-name: flipOutY !important; backface-visibility: visible !important; animation-name: flipOutY !important; }
 
 body { font-family: "Lucida Grande", Tahoma, Verdana, Arial, sans-serif; color: #d29239; background-color: #744139; text-align: center; }
 
@@ -400,17 +414,16 @@ fieldset { border-color: #c1c1c1; }
 
 .c361-lineup-list { list-style: none; margin: 0; padding: 0; }
 
-.c361-lineup-list-item { display: inline-block; width: 20%; margin-left: -0.35em; margin-top: -0.35em; position: relative; line-height: 1; box-sizing: border-box; padding: 17.5px; color: #cfcfcf; z-index: 1; }
-.c361-lineup-list-item .c361-lineup-list-item-description { display: none; position: absolute; top: 0; left: 0; width: 100%; opacity: 0; cursor: default; }
+.c361-lineup-list-item { display: inline-block; width: 20%; margin-left: -0.35em; margin-top: -0.35em; position: relative; line-height: 1; box-sizing: border-box; color: #cfcfcf; z-index: 1; }
 .c361-lineup-list-item .c361-heading { font-family: "Lucida Grande", Tahoma, Verdana, Arial, sans-serif; color: #fff; line-height: 1; margin-bottom: 17.5px; }
-.c361-lineup-list-item .c361-lineup-list-item-description { top: 17.5px; font-size: 80%; padding: 17.5px; box-sizing: border-box; }
+.c361-lineup-list-item .c361-lineup-list-item-description { position: absolute; top: 0; left: 0; bottom: 0; width: 100%; opacity: 0; cursor: default; font-size: 80%; padding: 17.5px; box-sizing: border-box; }
 .c361-lineup-list-item .c361-lineup-list-item-description p { margin-bottom: 17.5px; }
 .c361-lineup-list-item .c361-lineup-list-item-meta { color: #fff; font-weight: bold; }
-.c361-lineup-list-item .c361-lineup-list-item-image { cursor: pointer; opacity: 0.6; -webkit-transition: opacity 300ms ease-in 0s, box-shadow 100ms ease-in 0s; -moz-transition: opacity 300ms ease-in 0s, box-shadow 100ms ease-in 0s; -ms-transition: opacity 300ms ease-in 0s, box-shadow 100ms ease-in 0s; -o-transition: opacity 300ms ease-in 0s, box-shadow 100ms ease-in 0s; transition: opacity 300ms ease-in 0s, box-shadow 100ms ease-in 0s; }
+.c361-lineup-list-item .c361-lineup-list-item-image { -webkit-transition: opacity 300ms ease-in 0s, box-shadow 100ms ease-in 0s; -moz-transition: opacity 300ms ease-in 0s, box-shadow 100ms ease-in 0s; -ms-transition: opacity 300ms ease-in 0s, box-shadow 100ms ease-in 0s; -o-transition: opacity 300ms ease-in 0s, box-shadow 100ms ease-in 0s; transition: opacity 300ms ease-in 0s, box-shadow 100ms ease-in 0s; cursor: pointer; opacity: 0.6; }
 .c361-lineup-list-item:hover .c361-lineup-list-item-image, .c361-lineup-list-item:focus .c361-lineup-list-item-image { opacity: 1; box-shadow: 0 0 30px rgba(0, 0, 0, 0.6); }
-.c361-lineup-list-item.is-active .c361-lineup-list-item-description { -webkit-transform: scale(1.2); -moz-transform: scale(1.2); -ms-transform: scale(1.2); -o-transform: scale(1.2); transform: scale(1.2); -webkit-transition-property: -webkit-transform; -moz-transition-property: -moz-transform; -ms-transition-property: -ms-transform; -o-transition-property: -o-transform; transition-property: transform; -webkit-transition-duration: 250ms; -moz-transition-duration: 250ms; -ms-transition-duration: 250ms; -o-transition-duration: 250ms; transition-duration: 250ms; -webkit-transition-timing-function: ease-in; -moz-transition-timing-function: ease-in; -ms-transition-timing-function: ease-in; -o-transition-timing-function: ease-in; transition-timing-function: ease-in; background-color: rgba(0, 0, 0, 0.8); }
-.c361-lineup-list-item.is-active .c361-lineup-list-item-meta, .c361-lineup-list-item.is-active .c361-heading, .c361-lineup-list-item.is-active .c361-lineup-list-item-description { display: block; opacity: 1; -webkit-transition: opacity 1500ms ease-in 0s; -moz-transition: opacity 1500ms ease-in 0s; -ms-transition: opacity 1500ms ease-in 0s; -o-transition: opacity 1500ms ease-in 0s; transition: opacity 1500ms ease-in 0s; }
-.c361-lineup-list-item.is-active .c361-lineup-list-item-image { visibility: hidden; }
+.c361-lineup-list-item.is-active { z-index: 2; }
+.c361-lineup-list-item.is-active .c361-lineup-list-item-description { background-color: rgba(0, 0, 0, 0.8); }
+.c361-lineup-list-item.is-active .c361-lineup-list-item-image { opacity: 0; }
 
 .c361-drinks { margin-top: 35px; background: url("../images/bg_world_map.png") no-repeat center -110px; background-size: cover; }
 .c361-drinks .c361-heading { font-size: 3.5em; color: #c3b26b; }
