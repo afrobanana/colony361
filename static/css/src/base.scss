@@ -411,6 +411,7 @@ fieldset {
 
      .c361-lineup-list-item-description {
         @extend .animated;
+        display: none;
         position: absolute;
         top: 0;
         left: 0;
@@ -455,6 +456,7 @@ fieldset {
         .c361-lineup-list-item-description {
             @extend .flipInY;
 
+            display: block;
             background-color: rgba(0, 0, 0, 0.8);
         }
 
