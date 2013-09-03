@@ -217,6 +217,10 @@ fieldset {
     background: url("../images/bg_hero.jpg") no-repeat 0 0;
     background-size: cover;
 
+    .c361-inner {
+        // padding: 0;
+    }
+
     // position: fixed;
     // top: 0;
     // left: 0;
@@ -340,7 +344,7 @@ fieldset {
     margin-left: -0.35em; // maxi
     margin-top: -0.35em; // maxi
     position: relative;
-    overflow: hidden;
+    // overflow: hidden;
     line-height: 1;
     box-sizing: border-box;
     padding: $gutter / 2;
@@ -443,6 +447,7 @@ fieldset {
 }
 
 .c361-drinks {
+    margin-top: $gutter;
     background: url("../images/bg_world_map.png") no-repeat center -110px;
     background-size: cover;
 
