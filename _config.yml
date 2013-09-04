@@ -4,13 +4,13 @@ description: "Colony3 61"
 # if root has leading /, no trailing /
 
 # Github
-domain: "afrobanana.github.io"
-root: "/colony361"
+# domain: "afrobanana.github.io"
+# root: "/colony361"
 
 # Local
 # domain: "127.0.0.1:4000"
 # root: ""
 
 # Production
-# domain: "colony361.afrobananarepublic.com"
-# root: ""
+domain: "www.afrobananarepublic.com"
+root: ""
