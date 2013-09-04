@@ -186,7 +186,7 @@ nav a {
     color: $secondary;
 }
 
-a:link {
+strong, a:link, a:visited {
     color: $helper3;
 }
 
