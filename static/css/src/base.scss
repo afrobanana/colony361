@@ -535,24 +535,101 @@ fieldset {
 }
 
 .c361-sponsors {
+    font-size: 80%;
+    color: #999;
     background-color: #000;
     line-height: 1;
 
     ul {
+        @extend .clearfix;
+
         list-style: none;
         margin: 0;
         padding: 0;
-        display: inline-block;
-        line-height: 1;
-        @extend .clearfix;
+    }
+}
+
+.c361-sponsor {
+    // float: left;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    text-indent: -999em;
+    opacity: 0.5;
+    background-color: #111;
+    background-image: url("../images/bg_sponsors.png");
+    background-repeat: no-repeat;
+    height: 50px;
+    margin: $gutter;
+
+    &[title] {
+        position: relative;
+
+        &:before {
+            position: absolute;
+            top: -2em;
+            left: 0;
+            right: 0;
+            color: #c1c1c1;
+            font-size: 90%;
+            display: block;
+            content: attr(title);
+            text-indent: 0;
+            text-align: center;
+        }
     }
 
-    li {
-        display: inline-block;
-        min-height: 150px;
-        min-width: 230px;
-        background-color: #222;
+    a {
+        width: 100%;
+        height: 100%;
+        display: block;
     }
+}
+
+.c361-sponsor-premium {
+    display: block;
+    margin: $gutter auto 0;
+}
+
+.c361-sponsor-cytavoda,
+.c361-sponsor-city,
+.c361-sponsor-yeri,
+.c361-sponsor-gruppo,
+.c361-sponsor-3rcy,
+.c361-sponsor-luce,
+.c361-sponsor-fakas {
+    @extend .c361-sponsor;
+}
+
+.c361-sponsor-cytavoda {
+    width: 258px;
+    height: 100px;
+}
+.c361-sponsor-city {
+    width: 150px;
+    height: 70px;
+    background-position: -260px 0;
+}
+.c361-sponsor-yeri {
+    width: 45px;
+    background-position: -420px 0;
+}
+.c361-sponsor-gruppo {
+    width: 105px;
+    background-position: -470px 0;
+}
+.c361-sponsor-3rcy {
+    width: 55px;
+    background-position: -580px 0;
+}
+.c361-sponsor-luce {
+    width: 168px;
+    background-position: -640px 0;
+}
+
+.c361-sponsor-fakas {
+    width: 137px;
+    background-position: -820px 0;
 }
 
 .c361-footer-global {
