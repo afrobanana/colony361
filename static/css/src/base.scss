@@ -200,6 +200,8 @@ fieldset {
 
 .c361-inner {
     @extend .container;
+
+    min-width: 980px;
 }
 
 .c361-helper {
@@ -262,7 +264,7 @@ fieldset {
 }
 
 .c361-hero {
-    padding-top: $gutter * 3;
+    padding-top: 150px; // header height
     position: relative;
     z-index: 2;
 
@@ -270,14 +272,23 @@ fieldset {
     background-size: cover;
 
     .c361-inner {
-        // padding: 0;
+        padding: 0;
     }
 
-    // position: fixed;
-    // top: 0;
-    // left: 0;
-    // right: 0;
-    // z-index: 1;
+    &:before {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: block;
+        content: " ";
+        height: 6em;
+        background-color: #000;
+        z-index: 2;
+
+        @include linear-gradient(top, transparent, rgba(0,0,0, 0.7));
+    }
+
     &:after {
         position: absolute;
         top: 0;
@@ -289,27 +300,38 @@ fieldset {
         background-size: cover;
         z-index: -1;
     }
+}
 
-    // .c361-inner:after {
-    //     position: absolute;
-    //     top: 0;
-    //     bottom: 0;
-    //     right: 0;
-    //     left: 0;
-    //     content: " ";
-    //     background-color: #56BE8F;
-    // }
+.c361-hero-media {
+    position: absolute;
+    top: 0; // header-global height
+    left: 0;
+    right: 0;
+    bottom: 4em; // nav-global height
+
+    > .c361-hero-media-content {
+        display: block;
+        margin: 0 auto;
+        padding: 0;
+        height: auto;
+        width: auto;
+        max-height: 100%;
+        max-width: 100%;
+    }
 }
 
 .c361-nav-global {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     font-size: 2em;
-
+    z-index: 3;
     .nav-item {
         width: 25%;
 
         a {
-            color: $tertiary;
-            // opacity: 0.7;
+            // color: $tertiary;
         }
     }
 }

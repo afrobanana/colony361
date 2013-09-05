@@ -40,7 +40,7 @@
     <section class="c361-content">
         <section class="c361-hero">
             <div class="c361-inner">
-                <img src="{{ site.root }}/static/images/flyer.jpg" width="1070" height="616">
+                <div class="c361-hero-media"><img src="{{ site.root }}/static/images/flyer.jpg" width="1070" height="616" class="c361-hero-media-content"></div>
                 <nav class="c361-nav-global">
                     <h3 class="c361-helper">Navigation</h3>
                     <ol class="nav-horizontal">
@@ -452,9 +452,10 @@
         </div>
     </footer>
 </div>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
+<script src="{{ site.root }}/static/js/jquery-1.8.3.js"></script>
 <script type="text/javascript">
-    (function(){
+    (function() {
         var line_up = $('.c361-lineup-list');
 
         line_up.on('click', '.c361-lineup-list-item', function(e) {
@@ -463,13 +464,23 @@
 
             $(this).toggleClass('is-active').siblings().removeClass('is-active');
         });
+    })();
 
+    (function() {
+        $(window).resize(function() {
+            var hero = $('.c361-hero'),
+                hero_inner = $('.c361-inner', hero),
+                hero_inner_offset = hero_inner.offset(),
+                max_height = window.innerHeight;
+
+            hero_inner.height(max_height - hero_inner_offset.top);
+        }).trigger('resize');
     })();
 </script>
 <!-- Google Analytics -->
 <script type="text/javascript">
-var _gaq = [['_setAccount', 'UA-25314979-1'], ['_trackPageview']];
-(function(d, t) {var g = d.createElement(t), s = d.getElementsByTagName(t)[0];g.async = true;g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';s.parentNode.insertBefore(g, s);})(document, 'script');
+// var _gaq = [['_setAccount', 'UA-25314979-1'], ['_trackPageview']];
+// (function(d, t) {var g = d.createElement(t), s = d.getElementsByTagName(t)[0];g.async = true;g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';s.parentNode.insertBefore(g, s);})(document, 'script');
 </script>
 </body>
 </html>
