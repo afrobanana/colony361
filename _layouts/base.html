@@ -31,7 +31,7 @@
         <div class="c361-inner">
             <h1 class="c361-heading"><a href="">{{ site.name }}</a></h1>
             <h2 class="c361-heading c361-date">
-                14 September 2013
+                14September2013
                 <small>18:00 until early in the morning &mdash; 12&euro;</small>
             </h2>
         </div>
@@ -40,7 +40,18 @@
     <section class="c361-content">
         <section class="c361-hero">
             <div class="c361-inner">
-                <div class="c361-hero-media"><img src="{{ site.root }}/static/images/flyer.jpg" width="1070" height="616" class="c361-hero-media-content"></div>
+                <div class="c361-hero-media"><div class="c361-hero-media-content"></div>
+                <div class="c361-hero-text">
+                    <p>Many groups came together to form our great republic. First among equals, was <strong>Colony361</strong>.</p>
+
+                    <p>Some believe it was the brain child of an ex-military man, and others say it was just a collaborative accident. Either way, it conducted itself on 3 simple principles.</p>
+
+                    <ul>
+                        <li><strong>One.</strong> The re-generation of dead space.</li>
+                        <li><strong>Two.</strong> The collaboration &amp; hybridization of disciplines.</li>
+                        <li><strong>Three.</strong> The construction of your own happy place.</li>
+                    </ul>
+                </div>
                 <nav class="c361-nav-global">
                     <h3 class="c361-helper">Navigation</h3>
                     <ol class="nav-horizontal">
@@ -469,7 +480,7 @@
     (function() {
         $(window).resize(function() {
             var hero = $('.c361-hero'),
-                hero_inner = $('.c361-inner', hero),
+                hero_inner = $('.c361-hero-media-content', hero),
                 hero_inner_offset = hero_inner.offset(),
                 max_height = window.innerHeight;
 

@@ -230,16 +230,6 @@ fieldset {
         color: $primary;
         font-size: 5em;
         text-align: left;
-        position: relative;
-        &:before {
-            position: absolute;
-            left: -80px;
-            top: 10px;
-            width: 61px;
-            height: 60px;
-            content: " ";
-            background: url("../images/bg_logo_header.png") no-repeat 0 0;
-        }
 
         a {
             color: inherit;
@@ -255,7 +245,7 @@ fieldset {
         right: $gutter;
         text-align: right;
         small {
-            font-family: $lucida-grande;
+            font-family: 'DINPro';
             font-size: 35%;
             font-weight: normal;
             display: block;
@@ -272,7 +262,7 @@ fieldset {
     background-size: cover;
 
     .c361-inner {
-        padding: 0;
+        padding: 0 $gutter;
     }
 
     &:before {
@@ -303,13 +293,15 @@ fieldset {
 }
 
 .c361-hero-media {
-    position: absolute;
+    // position: absolute;
     top: 0; // header-global height
     left: 0;
     right: 0;
     bottom: 4em; // nav-global height
 
     > .c361-hero-media-content {
+        background: url("../images/bg_hero_poster.png") no-repeat top left;
+        background-size: cover;
         display: block;
         margin: 0 auto;
         padding: 0;
@@ -317,6 +309,50 @@ fieldset {
         width: auto;
         max-height: 100%;
         max-width: 100%;
+        position: relative;
+
+        // &:after {
+        //     position: absolute;
+        //     content: " ";
+        //     display: block;
+        //     top: 0;
+        //     right: 0;
+        //     bottom: 0;
+        //     width: 40%;
+        //     background-color: red;
+        //     z-index: 2;
+        // }
+    }
+}
+
+.c361-hero-text {
+    font-family: 'DINPro';
+    font-size: 90%;
+    color: #55BE8F;
+    position: absolute;
+    top: 0;
+    right: $gutter;
+    width: 30%;
+    padding: 180px $gutter 0;
+    text-shadow: -1px 0px 3px #000;
+    background: url("../images/bg_hero_text_logo.png") no-repeat center $gutter / 2;
+
+    p {
+        margin-bottom: $gutter / 2;
+    }
+
+    strong {
+        color: #DA6780;
+    }
+
+    ol, ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        strong {
+            display: block;
+        }
     }
 }
 
@@ -396,12 +432,8 @@ fieldset {
     }
 
     .c361-lineup-stage-meta {
-        // display: inline;
-        // position: absolute;
-        // top: 1.4em;
-        // right: 0;
         margin-bottom: $gutter;
-        font-family: 'October Guard';
+        font-family: 'DINPro';
     }
 }
 
