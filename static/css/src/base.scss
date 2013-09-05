@@ -282,11 +282,11 @@ fieldset {
         right: 0;
         display: block;
         content: " ";
-        height: 6em;
+        height: 4em;
         background-color: #000;
         z-index: 2;
 
-        @include linear-gradient(top, transparent, rgba(0,0,0, 0.7));
+        @include linear-gradient(top, transparent, rgba(255,255,255, 0.8));
     }
 
     &:after {
@@ -331,7 +331,7 @@ fieldset {
         width: 25%;
 
         a {
-            // color: $tertiary;
+            color: $tertiary;
         }
     }
 }
