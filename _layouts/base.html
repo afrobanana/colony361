@@ -40,18 +40,12 @@
     <section class="c361-content">
         <section class="c361-hero">
             <div class="c361-inner">
-                <div class="c361-hero-media"><div class="c361-hero-media-content"></div>
-                <div class="c361-hero-text">
-                    <p>Many groups came together to form our great republic. First among equals, was <strong>Colony361</strong>.</p>
-
-                    <p>Some believe it was the brain child of an ex-military man, and others say it was just a collaborative accident. Either way, it conducted itself on 3 simple principles.</p>
-
-                    <ul>
-                        <li><strong>One.</strong> The re-generation of dead space.</li>
-                        <li><strong>Two.</strong> The collaboration &amp; hybridization of disciplines.</li>
-                        <li><strong>Three.</strong> The construction of your own happy place.</li>
-                    </ul>
+                <div class="c361-hero-media">
+                    <div class="c361-hero-media-content">
+                        <img src="{{ site.root }}/static/images/poster.png">
+                    </div>
                 </div>
+
                 <nav class="c361-nav-global">
                     <h3 class="c361-helper">Navigation</h3>
                     <ol class="nav-horizontal">
@@ -468,6 +462,15 @@
 <script src="{{ site.root }}/static/js/jquery-1.8.3.js"></script>
 <script type="text/javascript">
     (function() {
+        $('.c361-hero-media-content').on('click', 'img', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            $(this).replaceWith('<iframe src="//player.vimeo.com/video/73888940?title=0&amp;byline=0&amp;portrait=0&amp;color=da6780&amp;autoplay=1" width="1070" height="602" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
+        });
+    })();
+
+    (function() {
         var line_up = $('.c361-lineup-list');
 
         line_up.on('click', '.c361-lineup-list-item', function(e) {
@@ -481,7 +484,7 @@
     (function() {
         $(window).resize(function() {
             var hero = $('.c361-hero'),
-                hero_inner = $('.c361-hero-media-content', hero),
+                hero_inner = $('.c361-hero-media', hero),
                 hero_inner_offset = hero_inner.offset(),
                 max_height = window.innerHeight;
 
